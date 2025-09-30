@@ -42,6 +42,7 @@
 		"vite": "^7.0.4"
 	},
 	"dependencies": {
+		"flowbite-svelte": "^1.13.16",
 		"swiper": "^12.0.2",
 		"three": "^0.180.0",
 		"vanta": "^0.5.24"

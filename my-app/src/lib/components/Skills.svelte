@@ -7,6 +7,7 @@
 		{ name: 'Pandas', icon: 'https://cdn.simpleicons.org/pandas' },
 		{ name: 'Matplotlib', icon: 'https://icon.icepanel.io/Technology/svg/Matplotlib.svg' },
 		{ name: 'FastAPI', icon: 'https://cdn.simpleicons.org/fastapi' },
+		{ name: 'Django', icon: 'https://cdn.simpleicons.org/django' },
 		{ name: 'Java', icon: 'https://icon.icepanel.io/Technology/svg/Java.svg' },
 		{ name: 'C#', icon: 'https://icon.icepanel.io/Technology/svg/C%23-%28CSharp%29.svg' },
 		{ name: 'HTML5', icon: 'https://cdn.simpleicons.org/html5' },
@@ -19,9 +20,9 @@
 		{ name: 'Svelte', icon: 'https://cdn.simpleicons.org/svelte' },
 		{ name: 'React', icon: 'https://cdn.simpleicons.org/react' },
 		{ name: 'TailwindCSS', icon: 'https://cdn.simpleicons.org/tailwindcss' },
-		{ name: 'FastAPI', icon: 'https://cdn.simpleicons.org/fastapi' },
-		{ name: 'Flask', icon: 'https://cdn.simpleicons.org/flask' },
-		{ name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs' }
+		{ name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs' },
+		{ name: 'Express.js', icon: 'https://cdn.simpleicons.org/express' },
+
 	];
 
 	const tech = [

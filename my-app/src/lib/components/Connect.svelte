@@ -2,7 +2,7 @@
 	import { reveal } from '../actions/reveal';
 </script>
 
-<section id="connect" class="bg-lightblue px-10 py-20 text-center" use:reveal>
+<section id="contact" class="bg-lightblue px-10 py-20 text-center" use:reveal>
 	<h2
 		class="mb-6 bg-gradient-to-r from-accentPink via-accentOrange to-accentYellow bg-clip-text text-4xl font-bold text-transparent"
 	>

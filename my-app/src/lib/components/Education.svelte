@@ -14,7 +14,7 @@
 	];
 </script>
 
-<section class="bg-deepblue py-20">
+<section id="education" class="bg-deepblue py-20">
 	<h2
 		class="mb-12 bg-gradient-to-r from-accentPink via-accentOrange
         to-accentYellow bg-clip-text text-center text-4xl
