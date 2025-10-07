@@ -23,14 +23,14 @@
         },
         {
             title: "IPA Support Chatbot",
-            description: "Final apprenticeship project integrating an AI-powered support chatbot with Svelte frontend and Flask/Azure backend.",
+            description: "Final apprentices hip project integrating an AI-powered support chatbot with Svelte frontend and Flask/Azure backend.",
             image: IPAImage,
             github: "https://github.com/Happtomato/IPA_SupportBot"
         },
         {
             title: "AI Translation System",
             description: "Built a multilingual AI translation pipeline with FastAPI.",
-            image: "https://placehold.net/800x600.png",
+            image: "https://placehold.net/800x600",
             link: "https://example.com",
             github: "https://example.com"
         },
