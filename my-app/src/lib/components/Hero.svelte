@@ -63,7 +63,11 @@
 	});
 </script>
 
-<section id="home" bind:this={vantaRef} class="relative h-screen w-screen overflow-hidden text-white">
+<section
+	id="home"
+	bind:this={vantaRef}
+	class="relative h-screen w-screen overflow-hidden text-white"
+>
 	<!-- optional gradient overlay to keep your theme -->
 	<!-- <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/50 to-blue-700/50"></div> -->
 

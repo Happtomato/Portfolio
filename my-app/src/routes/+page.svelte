@@ -7,10 +7,10 @@
 	import Connect from '$lib/components/Connect.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-    import Navbar from "$lib/components/Navbar.svelte";
+	import Navbar from '$lib/components/Navbar.svelte';
 </script>
 
-<main class="min-h-screen bg-deepblue font-sans text-white overflow-x-hidden">
+<main class="min-h-screen overflow-x-hidden bg-deepblue font-sans text-white">
 	<Navbar />
 	<Hero />
 	<About />
@@ -21,15 +21,17 @@
 	<Connect />
 	<Footer />
 </main>
-<style>
-  :global(html, body) {
-    /* Prevent side spill and show consistent bg behind rubber-banding */
-    overflow-x: hidden;
-    background-color: #0b1221; /* matches bg-deepblue */
-  }
 
-  /* Reduce iOS top/bottom rubber-band from revealing white */
-  :global(html), :global(body) {
-    overscroll-behavior-y: none;
-  }
+<style>
+	:global(html, body) {
+		/* Prevent side spill and show consistent bg behind rubber-banding */
+		overflow-x: hidden;
+		background-color: #0b1221; /* matches bg-deepblue */
+	}
+
+	/* Reduce iOS top/bottom rubber-band from revealing white */
+	:global(html),
+	:global(body) {
+		overscroll-behavior-y: none;
+	}
 </style>

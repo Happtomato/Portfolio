@@ -21,8 +21,7 @@
 		{ name: 'React', icon: 'https://cdn.simpleicons.org/react' },
 		{ name: 'TailwindCSS', icon: 'https://cdn.simpleicons.org/tailwindcss' },
 		{ name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs' },
-		{ name: 'Express.js', icon: 'https://cdn.simpleicons.org/express' },
-
+		{ name: 'Express.js', icon: 'https://cdn.simpleicons.org/express' }
 	];
 
 	const tech = [
