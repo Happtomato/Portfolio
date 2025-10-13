@@ -4,6 +4,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	import RecipeGeneratorImg from '$lib/assets/ProjectImages/RecipeGenerator.png';
 	import IPAImage from '$lib/assets/ProjectImages/IPA.png';
+	import PlantFinderImg from '$lib/assets/ProjectImages/PlantFinder.png';
 
 	type Project = {
 		title: string;
@@ -28,20 +29,13 @@
 			image: IPAImage,
 			github: 'https://github.com/Happtomato/IPA_SupportBot'
 		},
-		{
-			title: 'AI Translation System',
-			description: 'Built a multilingual AI translation pipeline with FastAPI.',
-			image: 'https://placehold.net/800x600',
-			link: 'https://example.com',
-			github: 'https://example.com'
-		},
-		{
-			title: 'IPA Support Chatbot',
-			description: 'Internal chatbot with automation features and Jira integration.',
-			image: 'https://placehold.co/800x600',
-			link: 'https://example.com',
-			github: 'https://example.com'
-		}
+        {
+            title: 'Plant Finder',
+            description: 'SvelteKit app to browse plants and diseases via the Perenual API, with server-side SQLite caching, adapter-node, Apache reverse proxy, and a Cloudflare Tunnel.',
+            image: PlantFinderImg,
+            link: 'https://plants.dominik-dierberger.ch',
+            github: 'https://github.com/Happtomato/PlantFinder'
+        }
 	];
 
 	let current = 0;
