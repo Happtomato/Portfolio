@@ -5,6 +5,7 @@
     import RecipeGeneratorImg from '$lib/assets/ProjectImages/RecipeGenerator.png';
     import IPAImage from '$lib/assets/ProjectImages/IPA.png';
     import PlantFinderImg from '$lib/assets/ProjectImages/PlantFinder.png';
+    import ClimateImage from '$lib/assets/ProjectImages/Climate.png';
 
     type Project = {
         title: string;
@@ -20,7 +21,7 @@
             title: 'Climate Change Switzerland – Data Story',
             description:
                 'Interactive Streamlit data story visualizing climate change trends in Switzerland. Hosted on a self-managed Ubuntu server with Apache reverse proxy, systemd service, Cloudflare Tunnel, and one-command GitHub deploy.',
-            image: '/images/climate-change-ch.png', // or import like the others if you prefer
+            image: ClimateImage,
             link: 'https://climate-change-ch.dominik-dierberger.ch',
             github: 'https://github.com/Happtomato/Climate-Change-Switzerland-Data-Story',
             tags: ['Streamlit', 'Data Visualization', 'Climate Data', 'Python', 'Cloudflare Tunnel', 'Linux']
