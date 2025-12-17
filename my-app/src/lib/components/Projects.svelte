@@ -17,6 +17,15 @@
 
     const projects: Project[] = [
         {
+            title: 'Climate Change Switzerland – Data Story',
+            description:
+                'Interactive Streamlit data story visualizing climate change trends in Switzerland. Hosted on a self-managed Ubuntu server with Apache reverse proxy, systemd service, Cloudflare Tunnel, and one-command GitHub deploy.',
+            image: '/images/climate-change-ch.png', // or import like the others if you prefer
+            link: 'https://climate-change-ch.dominik-dierberger.ch',
+            github: 'https://github.com/Happtomato/Climate-Change-Switzerland-Data-Story',
+            tags: ['Streamlit', 'Data Visualization', 'Climate Data', 'Python', 'Cloudflare Tunnel', 'Linux']
+        },
+        {
             title: 'Plant Finder',
             description:
                 'SvelteKit app to browse plants and diseases via the Perenual API, with server-side SQLite caching, adapter-node, Apache reverse proxy, and a Cloudflare Tunnel.',
