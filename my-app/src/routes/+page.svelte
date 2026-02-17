@@ -32,6 +32,6 @@
 	/* Reduce iOS top/bottom rubber-band from revealing white */
 	:global(html),
 	:global(body) {
-		overscroll-behavior-y: none;
+		overscroll-behavior-y: auto;
 	}
 </style>
