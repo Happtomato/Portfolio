@@ -127,28 +127,28 @@
     }
 </script>
 
-<section id="projects" class="bg-deepblue px-6 py-24 sm:px-10">
+<section id="projects" class="overflow-hidden bg-deepblue px-4 py-20 sm:px-8 lg:px-10 lg:py-24">
     <div class="animate-fadeIn mx-auto max-w-[92rem] text-center">
         <h2
-                class="relative z-20 mb-14 bg-gradient-to-r from-accentPink via-accentOrange to-accentYellow bg-clip-text text-4xl font-bold text-transparent lg:text-6xl"
+                class="relative z-20 mb-8 bg-gradient-to-r from-accentPink via-accentOrange to-accentYellow bg-clip-text text-4xl font-bold text-transparent sm:mb-12 lg:text-6xl"
         >
             Projects
         </h2>
 
         <div
-                class="relative mt-10 min-h-[780px] md:h-[700px] lg:h-[720px]"
+                class="relative mx-auto max-w-7xl"
                 on:touchstart={handleTouchStart}
                 on:touchend={handleTouchEnd}
         >
             {#key current}
                 {#if projects.length}
                     <div
-                            class="absolute inset-0 z-10 flex items-center justify-center"
-                            in:fly={{ x: dir === 'next' ? 300 : -300, duration: 400, easing: cubicOut }}
-                            out:fly={{ x: dir === 'next' ? -300 : 300, duration: 400, easing: cubicOut }}
+                            class="flex will-change-transform items-center justify-center"
+                            in:fly={{ x: dir === 'next' ? 120 : -120, duration: 260, easing: cubicOut }}
+                            out:fly={{ x: dir === 'next' ? -120 : 120, duration: 260, easing: cubicOut }}
                     >
                         <article
-                                class="flex w-full max-w-7xl flex-col items-center gap-8 rounded-[2rem] p-8 shadow-2xl sm:p-10 md:flex-row md:p-12 lg:gap-12 lg:p-14"
+                                class="flex w-full flex-col items-center gap-6 rounded-[1.6rem] p-5 shadow-xl will-change-transform sm:gap-8 sm:p-8 md:flex-row md:p-10 lg:gap-12 lg:rounded-[2rem] lg:p-14"
                                 class:bg-darkblue={current % 2 === 0}
                                 class:bg-lightblue={current % 2 !== 0}
                         >
@@ -157,26 +157,28 @@
                                     alt={projects[current].title}
                                     width="900"
                                     height="650"
-                                    class="h-auto max-h-[260px] w-auto max-w-full shrink-0 rounded-2xl object-contain shadow-xl sm:max-h-[300px] md:max-h-[380px] lg:max-h-[430px] lg:max-w-[48%]"
+                                    class="h-auto max-h-[170px] w-auto max-w-full shrink-0 rounded-2xl object-contain shadow-lg sm:max-h-[240px] md:max-h-[360px] lg:max-h-[430px] lg:max-w-[48%]"
                             />
 
                             <div class="flex-1 text-left">
-                                <h3 class="mb-4 text-3xl font-semibold leading-tight lg:text-4xl">
+                                <h3 class="mb-3 text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
                                     {projects[current].title}
                                 </h3>
 
-                                <p class="mb-6 max-w-3xl text-base leading-8 text-accentYellow/85 lg:text-lg">
+                                <p
+                                        class="mb-5 max-w-3xl text-sm leading-7 text-accentYellow/85 sm:text-base lg:text-lg lg:leading-8"
+                                >
                                     {projects[current].description}
                                 </p>
 
                                 {#if projects[current].tags?.length}
-                                    <div class="mb-7 flex flex-wrap gap-2.5">
+                                    <div class="mb-7 flex flex-wrap gap-2">
                                         {#each projects[current].tags as tag (tag)}
-                                            <span
-                                                    class="inline-flex items-center rounded-full border border-accentYellow/30 bg-black/10 px-3.5 py-1.5 text-sm tracking-tight text-accentYellow/90 backdrop-blur-sm transition hover:bg-accentYellow/10"
+											<span
+                                                    class="inline-flex items-center rounded-full border border-accentYellow/30 bg-black/10 px-3 py-1 text-xs tracking-tight text-accentYellow/90 backdrop-blur-sm transition hover:bg-accentYellow/10 sm:px-3.5 sm:py-1.5 sm:text-sm"
                                             >
-                                                {tag}
-                                            </span>
+												{tag}
+											</span>
                                         {/each}
                                     </div>
                                 {/if}
@@ -187,7 +189,7 @@
                                                 href={projects[current].link}
                                                 target="_blank"
                                                 rel="noreferrer"
-                                                class="rounded-lg bg-accentPink px-5 py-3 font-semibold text-deepblue transition hover:bg-accentOrange"
+                                                class="rounded-lg bg-accentPink px-5 py-3 text-center font-semibold text-deepblue transition hover:bg-accentOrange"
                                         >
                                             View Project
                                         </a>
@@ -198,7 +200,7 @@
                                                 href={projects[current].github}
                                                 target="_blank"
                                                 rel="noreferrer"
-                                                class="inline-flex items-center gap-2 rounded-lg bg-accentOrange px-5 py-3 font-semibold text-deepblue transition hover:bg-accentPink"
+                                                class="inline-flex items-center justify-center gap-2 rounded-lg bg-accentOrange px-5 py-3 font-semibold text-deepblue transition hover:bg-accentPink"
                                         >
                                             <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -221,46 +223,48 @@
                 {/if}
             {/key}
 
-            <button
-                    on:click={prev}
-                    aria-label="Previous project"
-                    class="absolute -left-5 top-1/2 z-20 -translate-y-1/2 transform rounded-full bg-accentPink p-3 text-deepblue shadow transition-transform duration-200 hover:bg-accentOrange md:-left-12 md:p-4"
-                    class:animate-bumpLeft={leftKick}
-            >
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 md:h-7 md:w-7"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        aria-hidden="true"
+            <div class="mt-6 flex items-center justify-center gap-5 sm:mt-8">
+                <button
+                        on:click={prev}
+                        aria-label="Previous project"
+                        class="rounded-full bg-accentPink p-3 text-deepblue shadow transition-transform duration-200 hover:bg-accentOrange md:p-4"
+                        class:animate-bumpLeft={leftKick}
                 >
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 md:h-7 md:w-7"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
 
-            <button
-                    on:click={next}
-                    aria-label="Next project"
-                    class="absolute -right-5 top-1/2 z-20 -translate-y-1/2 transform rounded-full bg-accentPink p-3 text-deepblue shadow transition-transform duration-200 hover:bg-accentOrange md:-right-12 md:p-4"
-                    class:animate-bumpRight={rightKick}
-            >
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 md:h-7 md:w-7"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        aria-hidden="true"
+                <button
+                        on:click={next}
+                        aria-label="Next project"
+                        class="rounded-full bg-accentPink p-3 text-deepblue shadow transition-transform duration-200 hover:bg-accentOrange md:p-4"
+                        class:animate-bumpRight={rightKick}
                 >
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 md:h-7 md:w-7"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
         </div>
 
-        <div class="mt-10 flex justify-center gap-2.5">
+        <div class="mt-6 flex justify-center gap-2.5 sm:mt-8">
             {#each projects as _, i (i)}
                 <button
                         on:click={() => (current = i)}
