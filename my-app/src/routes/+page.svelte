@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from '$lib/preferences';
 	import About from '$lib/components/About.svelte';
 	import Skills from '$lib/components/Skills.svelte';
 	import Education from '$lib/components/Education.svelte';
@@ -10,28 +11,27 @@
 	import Navbar from '$lib/components/Navbar.svelte';
 </script>
 
-<main class="min-h-screen overflow-x-hidden bg-deepblue font-sans text-white">
-	<Navbar />
-	<Hero />
-	<About />
-	<Skills />
-	<Education />
-	<Experience />
-	<Projects />
-	<Connect />
-	<Footer />
+<svelte:head>
+	<title>{$t('Dominik Dierberger — Software Developer · Backend & AI')}</title>
+	<meta
+		name="description"
+		content={$t(
+			'Software developer focused on Python, APIs and data-driven applications. Explore Dominik Dierberger’s projects, experience at FutureLog and AI & Machine Learning studies at HSLU.'
+		)}
+	/>
+	<meta
+		property="og:title"
+		content={$t('Dominik Dierberger — Software Developer · Backend & AI')}
+	/>
+	<meta
+		property="og:description"
+		content={$t(
+			'Software developer focused on Python, APIs and data-driven applications. Explore Dominik Dierberger’s projects, experience at FutureLog and AI & Machine Learning studies at HSLU.'
+		)}
+	/>
+</svelte:head>
+<Navbar />
+<main id="main" tabindex="-1">
+	<Hero /><Projects /><About /><Skills /><Experience /><Education /><Connect />
 </main>
-
-<style>
-	:global(html, body) {
-		/* Prevent side spill and show consistent bg behind rubber-banding */
-		overflow-x: hidden;
-		background-color: #0b1221; /* matches bg-deepblue */
-	}
-
-	/* Reduce iOS top/bottom rubber-band from revealing white */
-	:global(html),
-	:global(body) {
-		overscroll-behavior-y: auto;
-	}
-</style>
+<Footer />

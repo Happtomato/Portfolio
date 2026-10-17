@@ -1,26 +1,37 @@
-<script>
-	import { reveal } from '../actions/reveal.ts';
+<script lang="ts">
+	import { t } from '$lib/preferences';
+	import { reveal } from '$lib/actions/reveal';
 </script>
 
-<section id="about" class="overflow-hidden bg-darkblue px-10 py-20">
-	<div use:reveal={{ direction: 'left', type: 'fade' }} class="mx-auto max-w-3xl text-center">
-		<h2
-			class="mb-6 bg-gradient-to-r from-accentPink via-accentOrange to-accentYellow bg-clip-text text-4xl font-bold text-transparent"
-		>
-			About Me
-		</h2>
-		<p class="leading-relaxed text-accentYellow/80">
-			I’m Dominik, a motivated and adaptable junior backend developer currently studying Artificial
-			Intelligence & Machine Learning at HSLU. I thrive in small, agile teams where I can take
-			ownership of projects and apply my skills in Python, Flask, FastAPI, and database engineering.
-			Outside of my professional work, I’m passionate about clean code, creative problem-solving,
-			and continuous learning.
-			<br />
-			<br />
-			On a personal note, I share my life with my cats who keep me grounded and entertained, and I enjoy
-			cooking, making music as a drummer, pianist, and guitarist, playing poker, and building custom
-			PCs. Technology and creativity are at the center of both my work and hobbies, and I’m always excited
-			to learn something new. :)
-		</p>
+<section id="about" class="section section-tinted">
+	<div class="shell about-layout" use:reveal>
+		<div>
+			<p class="eyebrow">{$t('02 / THE PERSON BEHIND THE CODE')}</p>
+			<h2>
+				{$t('A developer’s mindset.')}<br /><span class="gradient-text"
+					>{$t('A creative streak.')}</span
+				>
+			</h2>
+		</div>
+		<div class="about-copy">
+			<p class="lead">
+				{$t('I like understanding how things work — and making them work better.')}
+			</p>
+			<p>
+				{$t(
+					'I’m Dominik, a software developer with a focus on Python, APIs and databases. At FutureLog, I contributed to supplier applications, internal tools and AI-powered workflows. I enjoy working in small teams, taking responsibility and turning complex requirements into maintainable software.'
+				)}
+			</p>
+			<p>
+				{$t(
+					'My studies in Artificial Intelligence & Machine Learning at HSLU build on that practical foundation. Alongside coursework, I explore data applications and develop a 3D voxel roguelike in Unity.'
+				)}
+			</p>
+			<p class="personal-note">
+				{$t(
+					'Away from the keyboard? You’ll find me making music on drums, piano or guitar, experimenting in the kitchen, building PCs — or spending time with my cats.'
+				)}
+			</p>
+		</div>
 	</div>
 </section>
